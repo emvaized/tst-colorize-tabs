@@ -1,0 +1,46 @@
+{
+    "extensionDescription": {
+        "message": "Цей додаток дозволяє встановити індивідуальний колір для кожної вкладки, щоб виділити її",
+        "description": "This extension allows to set individual color for each tab in order to highlight it"
+    },
+    "green": {
+        "message": "Зелений",
+        "description": "Green"
+    },
+    "red": {
+        "message": "Червоний",
+        "description": "Red"
+    },
+    "blue": {
+        "message": "Голубий",
+        "description": "Blue"
+    },
+    "brown": {
+        "message": "Коричневий",
+        "description": "Brown"
+    },
+    "yellow": {
+        "message": "Жовтий",
+        "description": "Yellow"
+    },
+    "purple": {
+        "message": "Фіолетовий",
+        "description": "Purple"
+    },
+    "orange": {
+        "message": "Помаранчевий",
+        "description": "Orange"
+    },
+    "noColor": {
+        "message": "Без кольору",
+        "description": "No color"
+    },
+    "chooseColor": {
+        "message": "Вибрати колір",
+        "description": "Choose color"
+    },
+    "color": {
+        "message": "Колір",
+        "description": "Color"
+    }
+}

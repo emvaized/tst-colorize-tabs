@@ -1,0 +1,46 @@
+{
+    "extensionDescription": {
+        "message": "Esta extensión permite establecer un color individual para cada pestaña para resaltarla",
+        "description": "This extension allows to set individual color for each tab in order to highlight it"
+    },
+    "green": {
+        "message": "Verde",
+        "description": "Green"
+    },
+    "red": {
+        "message": "Roja",
+        "description": "Red"
+    },
+    "blue": {
+        "message": "Azul",
+        "description": "Blue"
+    },
+    "brown": {
+        "message": "Marrón",
+        "description": "Brown"
+    },
+    "yellow": {
+        "message": "Amarilla",
+        "description": "Yellow"
+    },
+    "purple": {
+        "message": "Morada",
+        "description": "Purple"
+    },
+    "orange": {
+        "message": "Naranja",
+        "description": "Orange"
+    },
+    "noColor": {
+        "message": "Sin color",
+        "description": "No color"
+    },
+    "chooseColor": {
+        "message": "Elegir color",
+        "description": "Choose color"
+    },
+    "color": {
+        "message": "Color",
+        "description": "Color"
+    }
+}

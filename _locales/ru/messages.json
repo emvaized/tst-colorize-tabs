@@ -1,0 +1,46 @@
+{
+    "extensionDescription": {
+        "message": "Это расширение позволяет установить свой цвет для каждой вкладки, чтобы выделить её",
+        "description": "This extension allows to set individual color for each tab in order to highlight it"
+    },
+    "green": {
+        "message": "Зеленый",
+        "description": "Green"
+    },
+    "red": {
+        "message": "Красный",
+        "description": "Red"
+    },
+    "brown": {
+        "message": "Коричневый",
+        "description": "Brown"
+    },
+    "blue": {
+        "message": "Голубой",
+        "description": "Blue"
+    },
+    "yellow": {
+        "message": "Желтый",
+        "description": "Yellow"
+    },
+    "orange": {
+        "message": "Оранжевый",
+        "description": "Orange"
+    },
+    "noColor": {
+        "message": "Без цвета",
+        "description": "No color"
+    },
+    "chooseColor": {
+        "message": "Выбрать цвет",
+        "description": "Choose color"
+    },
+    "purple": {
+        "message": "Фиолетовый",
+        "description": "Фиолетовый"
+    },
+    "color": {
+        "message": "Цвет",
+        "description": "Color"
+    }
+}
