@@ -255,9 +255,15 @@ async function registerToTST() {
     try {
         const self = await browser.management.getSelf();
 
+        let css = '';
+        for (const [name, color] of Object.entries(availableColors)) {
+            css += `.tab.self-colored-${name} tab-item-substance { background-color: ${color} !important; }`;
+        }
+
         let success = await browser.runtime.sendMessage(kTST_ID, {
             type: 'register-self',
             name: self.id,
+            style: css,
         });
 
         return success;
@@ -269,16 +275,6 @@ async function registerToTST() {
 registerToTST().then(res => {
     browser.tabs.onRemoved.addListener(onTabRemoved);
     browser.tabs.onCreated.addListener(onTabCreated);
-
-    let css = '';
-    for (const [name, color] of Object.entries(availableColors)) {
-        css += `.tab.self-colored-${name} tab-item-substance { background-color: ${color} !important; }`;
-    }
-
-    browser.runtime.sendMessage(kTST_ID, {
-        type: "register-self",
-        style: css,
-    });
 
     /// Load stored colors from storage and apply to tabs
     browser.storage.local.get("userColoredTabs").then((results) => {
