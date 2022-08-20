@@ -1,0 +1,46 @@
+{
+    "extensionDescription": {
+        "message": "Met deze extensie kunt u ieder tabblad van een individuele kleur voorzien",
+        "description": "This extension allows to set individual color for each tab in order to highlight it"
+    },
+    "green": {
+        "message": "Groen",
+        "description": "Green"
+    },
+    "red": {
+        "message": "Rood",
+        "description": "Red"
+    },
+    "blue": {
+        "message": "Blauw",
+        "description": "Blue"
+    },
+    "brown": {
+        "message": "Bruin",
+        "description": "Brown"
+    },
+    "yellow": {
+        "message": "Geel",
+        "description": "Yellow"
+    },
+    "purple": {
+        "message": "Paars",
+        "description": "Purple"
+    },
+    "orange": {
+        "message": "Oranje",
+        "description": "Orange"
+    },
+    "noColor": {
+        "message": "Geen kleur",
+        "description": "No color"
+    },
+    "chooseColor": {
+        "message": "Kies een kleur",
+        "description": "Choose color"
+    },
+    "color": {
+        "message": "Kleur",
+        "description": "Color"
+    }
+}
