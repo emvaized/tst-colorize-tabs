@@ -275,6 +275,7 @@ async function registerToTST() {
 registerToTST().then(res => {
     browser.tabs.onRemoved.addListener(onTabRemoved);
     browser.tabs.onCreated.addListener(onTabCreated);
+    browser.tabs.onMoved.addListener(onTabCreated);
 
     /// Load stored colors from storage and apply to tabs
     browser.storage.local.get("userColoredTabs").then((results) => {
