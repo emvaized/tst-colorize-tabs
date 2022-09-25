@@ -203,7 +203,7 @@ async function onTabRemoved(tabId, removeInfo) {
     updateStoredTabIndexes();
 }
 
-/// Update tabs indexes when new tab was created
+/// Update tabs indexes when new tab was created or reordered
 function onTabCreated(tab) {
     updateStoredTabIndexes();
 }

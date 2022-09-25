@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "default_locale": "en",
     "name": "[TST] Colorize tabs",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "__MSG_extensionDescription__",
     "author": "emvaized",
     "browser_specific_settings": {
