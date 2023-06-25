@@ -156,6 +156,8 @@ function colorizeTabs(color, ids) {
         console.log('TST-Colorize-Tabs: Added Tab ' + ids + ' as ' + color + '. colorizedTabs is now: ');
         console.log(colorizedTabs); // mci
     }
+
+    browser.browserAction.setBadgeText({text: colorizedTabs.size.toString()}); // Update badge with size
 }
 
 /// Clear any colors stored for tabs
@@ -187,6 +189,8 @@ function removeTabColors(tabIds) {
             return;
         }
     }
+
+    browser.browserAction.setBadgeText({text: colorizedTabs.size.toString()}); // Update badge with size
 }
 
 async function getMultiselectedTabs(tab) {
@@ -214,6 +218,8 @@ async function onTabRemoved(tabId, removeInfo) {
 }
 
 const colorizedTabs = new Set(); // Create Set() to track active tabs that are colorized
+browser.browserAction.setBadgeBackgroundColor({'color': 'green'}); // Set badge background to green
+browser.browserAction.setBadgeText({text: colorizedTabs.size.toString()}); // Update badge with size
 
 /// Init extension
 browser.runtime.onMessageExternal.addListener((aMessage, aSender) => {
