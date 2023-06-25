@@ -1,13 +1,13 @@
 {
     "manifest_version": 2,
     "default_locale": "en",
-    "name": "[TST] Colorize tabs",
-    "version": "1.0.2",
+    "name": "TST Colorize Tabs",
+    "version": "0.9.0",
     "description": "__MSG_extensionDescription__",
-    "author": "emvaized",
+    "homepage_url": "https://github.com/irvinm/TST-Colorize-Tabs",
     "browser_specific_settings": {
         "gecko": {
-            "id": "tst_colorize_tabs@emvaized.com"
+            "id": "TST-Colorize-Tabs@irvinm.addons.mozilla.org"
         }
     },
     "background": {
@@ -19,6 +19,7 @@
     "permissions": [
         "menus",
         "tabs",
-        "storage"
+        "storage",
+        "sessions"
     ]
 }
