@@ -113,7 +113,6 @@ browser.menus.onClicked.addListener(async (info, tab) => {
     switch (selectedColor) {
         case 'noColor': {
             removeTabColors(ids);
-            // saveColors();
             break;;
         }
 
@@ -148,13 +147,13 @@ function colorizeTabs(color, ids) {
         ids.forEach( (tabId) => { 
             browser.sessions.setTabValue(tabId, "color", color);
             colorizedTabs.add(tabId);
-            console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
-            console.log(colorizedTabs); // mci
+            console.log('TST-Colorize-Tabs: Added Tab ' + tabId + ' as ' + color + '. colorizedTabs is now: ');
+            console.log(colorizedTabs);
         });
     } else {
         browser.sessions.setTabValue(ids, "color", color);
         colorizedTabs.add(ids);
-        console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
+        console.log('TST-Colorize-Tabs: Added Tab ' + ids + ' as ' + color + '. colorizedTabs is now: ');
         console.log(colorizedTabs); // mci
     }
 }
@@ -174,7 +173,7 @@ function removeTabColors(tabIds) {
             browser.sessions.removeTabValue(tabId, "color");
             if (colorizedTabs.has(tabId)) {
                 colorizedTabs.delete(tabId);
-                console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
+                console.log('TST-Colorize-Tabs: Removed tab ' + tabId + '. colorizedTabs is now: ');
                 console.log(colorizedTabs); // mci
                 return;
             }
@@ -183,8 +182,8 @@ function removeTabColors(tabIds) {
         browser.sessions.removeTabValue(tabIds, "color");
         if (colorizedTabs.has(tabIds)) {
             colorizedTabs.delete(tabIds);
-            console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
-            console.log(colorizedTabs); // mci
+            console.log('TST-Colorize-Tabs: Removed tab ' + tabIds + '. colorizedTabs is now: ');
+            console.log(colorizedTabs);
             return;
         }
     }
@@ -220,7 +219,7 @@ const colorizedTabs = new Set(); // Create Set() to track active tabs that are c
 browser.runtime.onMessageExternal.addListener((aMessage, aSender) => {
     switch (aSender.id) {
         case kTST_ID:
-            console.log('TST-Colorize-Tabs: kTST_ID message -> ' + aMessage.type);
+            // console.log('TST-Colorize-Tabs: kTST_ID message -> ' + aMessage.type);
             switch (aMessage.type) {
                 case 'ready':
                     registerToTST();
@@ -271,7 +270,7 @@ function loadColorizedTabs() {
             browser.sessions.getTabValue(tab.id, "color").then((color) => {
     
                 if (color != undefined) {
-                    console.log("TST-Colorize-Tabs: Color tab " + tab.id + " to color " + color);
+                    // console.log("TST-Colorize-Tabs: Color tab " + tab.id + " to color " + color);
                     colorizeTabs(color, tab.id);
                 }
             });
