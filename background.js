@@ -1,9 +1,13 @@
+// TODO: Rework debug error logging moving forward
+// TODO: Ensure add\remove works for single tabs, multi-selected tabs, and browser restarts
+// TODO: Document limitation that restored tabs are not given previous tab.id ... so essentially new
+// TODO: Review\rework menu handling algo.  Do we can about disabling any of the item? Leave everything enabled?
+
 'use strict';
 
 const kTST_ID = 'treestyletab@piro.sakura.ne.jp';
-const debugMode = false;
+const debugMode = true;
 const coloredTabs = [];
-
 const colorOpacity = 0.2;
 const availableColors = {
     'red': `rgba(255, 0, 0, ${colorOpacity})`,
@@ -15,11 +19,9 @@ const availableColors = {
     'orange': `rgba(255, 69, 0, ${colorOpacity})`,
 };
 
-
 /// Create menu
 const menuItemDefinitionsById = {
     topLevel_colorizeTab: {
-        // title: browser.i18n.getMessage('chooseColor'),
         title: browser.i18n.getMessage('color'),
         contexts: ['tab'],
         visible: true,
@@ -49,7 +51,6 @@ menuItemDefinitionsById.noColor = {
     title: browser.i18n.getMessage('noColor'),
     contexts: ['tab'],
 };
-
 
 for (const [id, definition] of Object.entries(menuItemDefinitionsById)) {
     const params = {
@@ -112,13 +113,14 @@ browser.menus.onClicked.addListener(async (info, tab) => {
     switch (selectedColor) {
         case 'noColor': {
             removeTabColors(ids);
-            saveColors();
+            // saveColors();
             break;;
         }
 
         default: {
             removeTabColors(ids);
-            colorizeTabs(selectedColor, multiselectedTabs.length < 2 ? [tab.id] : ids);
+            //colorizeTabs(selectedColor, multiselectedTabs.length < 2 ? [tab.id] : ids);
+            colorizeTabs(selectedColor, ids);
 
             for (const tab of multiselectedTabs) {
                 if (coloredTabs.findIndex((el, i, arr) => el.id == tab.id) < 0)
@@ -129,30 +131,32 @@ browser.menus.onClicked.addListener(async (info, tab) => {
                     });
             }
 
-            saveColors();
             break;
         }
     }
 });
 
 /// Set color for passed tabs
-function colorizeTabs(colorString, tabIds) {
+function colorizeTabs(color, ids) {
     browser.runtime.sendMessage(kTST_ID, {
         type: 'add-tab-state',
-        tabs: tabIds,
-        state: 'self-colored-' + colorString,
+        tabs: ids,
+        state: 'self-colored-' + color,
     });
-}
 
-/// Store colors in storage in order to recreate after browser restart
-function saveColors() {
-    // browser.storage.local.clear();
-    if (debugMode) {
-        console.log('Saved colored tabs:');
-        console.log(coloredTabs);
+    if (Array.isArray(ids)) {
+        ids.forEach( (tabId) => { 
+            browser.sessions.setTabValue(tabId, "color", color);
+            colorizedTabs.add(tabId);
+            console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
+            console.log(colorizedTabs); // mci
+        });
+    } else {
+        browser.sessions.setTabValue(ids, "color", color);
+        colorizedTabs.add(ids);
+        console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
+        console.log(colorizedTabs); // mci
     }
-
-    browser.storage.local.set({ 'userColoredTabs': coloredTabs });
 }
 
 /// Clear any colors stored for tabs
@@ -165,24 +169,25 @@ function removeTabColors(tabIds) {
         });
     }
 
-    for (const tabId of tabIds) {
-        if (checkToDeleteColorData(tabId)) saveColors();
-    }
-}
-
-function checkToDeleteColorData(tabId) {
-    let result = false;
-
-    /// Clear any saved color for specified tab id
-    for (let i = 0, l = coloredTabs.length; i < l; i++) {
-        if (parseInt(coloredTabs[i].id) == tabId) {
-            coloredTabs.splice(i, 1);
-            result = true;
-            break;
+    if (Array.isArray(tabIds)) {
+        tabIds.forEach( (tabId) => {
+            browser.sessions.removeTabValue(tabId, "color");
+            if (colorizedTabs.has(tabId)) {
+                colorizedTabs.delete(tabId);
+                console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
+                console.log(colorizedTabs); // mci
+                return;
+            }
+        });        
+    } else {
+        browser.sessions.removeTabValue(tabIds, "color");
+        if (colorizedTabs.has(tabIds)) {
+            colorizedTabs.delete(tabIds);
+            console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
+            console.log(colorizedTabs); // mci
+            return;
         }
     }
-
-    return result;
 }
 
 async function getMultiselectedTabs(tab) {
@@ -199,49 +204,23 @@ async function getMultiselectedTabs(tab) {
 
 /// Check if removed tab had assigned color, and also update stored tab indexes
 async function onTabRemoved(tabId, removeInfo) {
-    if (checkToDeleteColorData(tabId)) saveColors();
-    updateStoredTabIndexes();
-}
-
-/// Update tabs indexes when new tab was created or reordered
-function onTabCreated(tab) {
-    updateStoredTabIndexes();
-}
-
-function updateStoredTabIndexes() {
-    for (let i = 0, l = coloredTabs.length; i < l; i++) {
-        let tabInfo = coloredTabs[i];
-
-        browser.tabs.get(parseInt(tabInfo.id)).then((tab) => {
-            if (!tab) return;
-
-            if (tab.index !== parseInt(tabInfo.index)) {
-                /// Needs to update
-
-                if (debugMode) {
-                    console.log('---');
-                    console.log('Needs to update index ' + tabInfo.index + ' to ' + tab.index);
-                    console.log('Data before update:');
-                    console.log(coloredTabs);
-                }
-
-                coloredTabs[i].index = tab.index;
-
-                if (debugMode) {
-                    console.log('Data after update:');
-                    console.log(coloredTabs);
-                }
-
-                saveColors();
-            }
-        })
+    if (removeInfo.isWindowClosing) return;
+    
+    if (colorizedTabs.has(tabId)) {
+        colorizedTabs.delete(tabId);
+        console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
+        console.log(colorizedTabs); // mci
+        return;
     }
 }
+
+const colorizedTabs = new Set(); // Create Set() to track active tabs that are colorized
 
 /// Init extension
 browser.runtime.onMessageExternal.addListener((aMessage, aSender) => {
     switch (aSender.id) {
         case kTST_ID:
+            console.log('TST-Colorize-Tabs: kTST_ID message -> ' + aMessage.type);
             switch (aMessage.type) {
                 case 'ready':
                     registerToTST();
@@ -253,6 +232,8 @@ browser.runtime.onMessageExternal.addListener((aMessage, aSender) => {
 
 async function registerToTST() {
     try {
+        console.log('TST-Colorize-Tabs: Try to register with TST');
+
         const self = await browser.management.getSelf();
 
         let css = '';
@@ -269,43 +250,31 @@ async function registerToTST() {
         return success;
     } catch (e) {
         // TST is not available
+        console.log('TST-Colorize-Tabs: TST is not available'); // mci
     }
 }
 
 registerToTST().then(res => {
     browser.tabs.onRemoved.addListener(onTabRemoved);
-    browser.tabs.onCreated.addListener(onTabCreated);
-    browser.tabs.onMoved.addListener(onTabCreated);
+//    browser.tabs.onCreated.addListener(onTabCreated); 
 
-    /// Load stored colors from storage and apply to tabs
-    browser.storage.local.get("userColoredTabs").then((results) => {
-        if (debugMode) {
-            console.log('Loaded colored tabs from storage:');
-            console.log(results.userColoredTabs);
-        }
+    loadColorizedTabs(); 
+});
 
-        if (results.userColoredTabs != undefined) {
-            let containsInvalidData = false;
+function loadColorizedTabs() {
 
-            for (const tabInfo of results.userColoredTabs) {
-                browser.tabs.query({ index: parseInt(tabInfo.index) }).then((tabs) => {
-                    if (tabs.length < 1) {
-                        /// Data is no longer relevant
-                        containsInvalidData = true;
-                        return;
-                    }
-
-                    coloredTabs.push({
-                        id: tabs[0].id,
-                        index: tabInfo.index,
-                        color: tabInfo.color
-                    });
-
-                    colorizeTabs(tabInfo.color, [tabs[0].id]);
-                })
-            }
-
-            if (containsInvalidData) saveColors();
+    console.log("TST-Colorize-Tabs: Loading previous tabs into array");    
+    browser.tabs.query({}).then((tabs) => {
+    
+        for (const tab of tabs) {
+    
+            browser.sessions.getTabValue(tab.id, "color").then((color) => {
+    
+                if (color != undefined) {
+                    console.log("TST-Colorize-Tabs: Color tab " + tab.id + " to color " + color);
+                    colorizeTabs(color, tab.id);
+                }
+            });
         }
     });
-});
+}
