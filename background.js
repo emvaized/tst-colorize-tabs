@@ -70,6 +70,7 @@ for (const [id, definition] of Object.entries(menuItemDefinitionsById)) {
 }
 
 /// Show menu
+/*
 browser.menus.onShown.addListener(async (info, tab) => {
     let modified = false;
     for (const [id, definition] of Object.entries(menuItemDefinitionsById)) {
@@ -97,6 +98,7 @@ browser.menus.onShown.addListener(async (info, tab) => {
     if (modified)
         browser.menus.refresh();
 });
+*/
 
 /// Handle menu item click
 browser.menus.onClicked.addListener(async (info, tab) => {
@@ -144,7 +146,7 @@ function colorizeTabs(color, ids) {
     });
 
     if (Array.isArray(ids)) {
-        ids.forEach( (tabId) => { 
+        ids.forEach((tabId) => {
             browser.sessions.setTabValue(tabId, "color", color);
             colorizedTabs.add(tabId);
             console.log('TST-Colorize-Tabs: Added Tab ' + tabId + ' as ' + color + '. colorizedTabs is now: ');
@@ -157,7 +159,7 @@ function colorizeTabs(color, ids) {
         console.log(colorizedTabs); // mci
     }
 
-    browser.browserAction.setBadgeText({text: colorizedTabs.size.toString()}); // Update badge with size
+    browser.browserAction.setBadgeText({ text: colorizedTabs.size.toString() }); // Update badge with size
 }
 
 /// Clear any colors stored for tabs
@@ -171,7 +173,7 @@ function removeTabColors(tabIds) {
     }
 
     if (Array.isArray(tabIds)) {
-        tabIds.forEach( (tabId) => {
+        tabIds.forEach((tabId) => {
             browser.sessions.removeTabValue(tabId, "color");
             if (colorizedTabs.has(tabId)) {
                 colorizedTabs.delete(tabId);
@@ -179,7 +181,7 @@ function removeTabColors(tabIds) {
                 console.log(colorizedTabs); // mci
                 return;
             }
-        });        
+        });
     } else {
         browser.sessions.removeTabValue(tabIds, "color");
         if (colorizedTabs.has(tabIds)) {
@@ -190,7 +192,7 @@ function removeTabColors(tabIds) {
         }
     }
 
-    browser.browserAction.setBadgeText({text: colorizedTabs.size.toString()}); // Update badge with size
+    browser.browserAction.setBadgeText({ text: colorizedTabs.size.toString() }); // Update badge with size
 }
 
 async function getMultiselectedTabs(tab) {
@@ -208,7 +210,7 @@ async function getMultiselectedTabs(tab) {
 /// Check if removed tab had assigned color, and also update stored tab indexes
 async function onTabRemoved(tabId, removeInfo) {
     if (removeInfo.isWindowClosing) return;
-    
+
     if (colorizedTabs.has(tabId)) {
         colorizedTabs.delete(tabId);
         console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
@@ -218,8 +220,8 @@ async function onTabRemoved(tabId, removeInfo) {
 }
 
 const colorizedTabs = new Set(); // Create Set() to track active tabs that are colorized
-browser.browserAction.setBadgeBackgroundColor({'color': 'green'}); // Set badge background to green
-browser.browserAction.setBadgeText({text: colorizedTabs.size.toString()}); // Update badge with size
+browser.browserAction.setBadgeBackgroundColor({ 'color': 'green' }); // Set badge background to green
+browser.browserAction.setBadgeText({ text: colorizedTabs.size.toString() }); // Update badge with size
 
 /// Init extension
 browser.runtime.onMessageExternal.addListener((aMessage, aSender) => {
@@ -261,20 +263,20 @@ async function registerToTST() {
 
 registerToTST().then(res => {
     browser.tabs.onRemoved.addListener(onTabRemoved);
-//    browser.tabs.onCreated.addListener(onTabCreated); 
+    //    browser.tabs.onCreated.addListener(onTabCreated); 
 
-    loadColorizedTabs(); 
+    loadColorizedTabs();
 });
 
 function loadColorizedTabs() {
 
-    console.log("TST-Colorize-Tabs: Loading previous tabs into array");    
+    console.log("TST-Colorize-Tabs: Loading previous tabs into array");
     browser.tabs.query({}).then((tabs) => {
-    
+
         for (const tab of tabs) {
-    
+
             browser.sessions.getTabValue(tab.id, "color").then((color) => {
-    
+
                 if (color != undefined) {
                     // console.log("TST-Colorize-Tabs: Color tab " + tab.id + " to color " + color);
                     colorizeTabs(color, tab.id);
