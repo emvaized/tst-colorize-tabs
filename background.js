@@ -68,37 +68,6 @@ for (const [id, definition] of Object.entries(menuItemDefinitionsById)) {
     browser.menus.create(params);
 }
 
-/// Show menu
-/*
-browser.menus.onShown.addListener(async (info, tab) => {
-    let modified = false;
-    for (const [id, definition] of Object.entries(menuItemDefinitionsById)) {
-        const enabled = true;
-        const changes = {};
-
-        /// Grey out option if it's already selected
-        // if (coloredTabs[id] && coloredTabs[id].includes(tab.id)) changes.enabled = false;
-
-        let indexColored = coloredTabs.findIndex((el, i, arr) => el.index == tab.index);
-        if (indexColored < 0 && id == 'noColor') changes.enabled = false;
-        else if (indexColored > -1 && coloredTabs[indexColored].color == id) changes.enabled = false;
-        else changes.enabled = true;
-
-        if (definition.enabled != enabled)
-            changes.enabled = definition.enabled = enabled;
-
-        if (Object.keys(changes).length == 0)
-            continue;
-
-        browser.menus.update(id, changes);
-        modified = true;
-    }
-
-    if (modified)
-        browser.menus.refresh();
-});
-*/
-
 /// Handle menu item click
 browser.menus.onClicked.addListener(async (info, tab) => {
     // Extra context menu commands won't be available on the blank area of the tab bar.
