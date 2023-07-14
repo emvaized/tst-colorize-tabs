@@ -124,7 +124,7 @@ function colorizeTabs(color, ids) {
         browser.sessions.setTabValue(ids, "color", color);
         colorizedTabs.add(ids);
         console.log('TST-Colorize-Tabs: Added Tab ' + ids + ' as ' + color + '. colorizedTabs is now: ');
-        console.log(colorizedTabs); // mci
+        console.log(colorizedTabs);
     }
 
     browser.browserAction.setBadgeText({ text: colorizedTabs.size.toString() }); // Update badge with size
@@ -146,7 +146,7 @@ function removeTabColors(tabIds) {
             if (colorizedTabs.has(tabId)) {
                 colorizedTabs.delete(tabId);
                 console.log('TST-Colorize-Tabs: Removed tab ' + tabId + '. colorizedTabs is now: ');
-                console.log(colorizedTabs); // mci
+                console.log(colorizedTabs);
                 return;
             }
         });
@@ -181,8 +181,8 @@ async function onTabRemoved(tabId, removeInfo) {
 
     if (colorizedTabs.has(tabId)) {
         colorizedTabs.delete(tabId);
-        console.log('TST-Colorize-Tabs: colorizedTabs is now: '); // mci
-        console.log(colorizedTabs); // mci
+        console.log('TST-Colorize-Tabs: colorizedTabs is now: ');
+        console.log(colorizedTabs);
         return;
     }
 }
@@ -225,13 +225,13 @@ async function registerToTST() {
         return success;
     } catch (e) {
         // TST is not available
-        console.log('TST-Colorize-Tabs: TST is not available'); // mci
+        console.log('TST-Colorize-Tabs: TST is not available');
     }
 }
 
 registerToTST().then(res => {
     browser.tabs.onRemoved.addListener(onTabRemoved);
-    //    browser.tabs.onCreated.addListener(onTabCreated); 
+    //    browser.tabs.onCreated.addListener(onTabCreated);  // mci - nothing really do with new tabs - delete
 
     loadColorizedTabs();
 });
@@ -253,3 +253,4 @@ function loadColorizedTabs() {
         }
     });
 }
+
