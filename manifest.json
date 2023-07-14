@@ -27,5 +27,19 @@
         "tabs",
         "storage",
         "sessions"
-    ]
+    ],
+    "commands": {
+        "next-tab-with-color": {
+            "suggested_key": {
+                "default": "Alt+Down"
+            },
+            "description": "Switch to the next colorized tab"
+        },
+        "previous-tab-with-color": {
+            "suggested_key": {
+                "default": "Alt+Up"
+            },
+            "description": "Switch to the previous colorized tab"
+        }
+    }
 }

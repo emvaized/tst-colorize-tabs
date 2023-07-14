@@ -254,3 +254,41 @@ function loadColorizedTabs() {
     });
 }
 
+function switchToTabWithColor(direction) {
+    browser.tabs.query({ currentWindow: true }, function (tabs) {
+        let currentTabIndex = -1;
+
+        // Find the current tab index
+        for (let i = 0; i < tabs.length; i++) {
+            if (tabs[i].active) {
+                currentTabIndex = i;
+                break;
+            }
+        }
+
+        // Find the next or previous tab with color
+        let targetTabIndex = -1;
+        for (let i = currentTabIndex + direction; i >= 0 && i < tabs.length; i += direction) {
+            //console.log("Tab Index = " + i + ", Tab.id = " + tabs[i].id + ",: Name -> (" + tabs[i].title + ")");
+            if (colorizedTabs.has(tabs[i].id)) {
+                console.log("Moving tab -> targetTabIndex = " + i + ", Tab.id = " + tabs[i].id, ": Name -> (" + tabs[i].title + ")");
+                targetTabIndex = i;
+                break;
+            }
+        }
+
+        // If a matching tab was found, activate it
+        if (targetTabIndex !== -1) {
+            browser.tabs.update(tabs[targetTabIndex].id, { active: true });
+        }
+    });
+}
+
+browser.commands.onCommand.addListener(function (command) {
+    if (command === "next-tab-with-color") {
+        switchToTabWithColor(1);
+    }
+    if (command === "previous-tab-with-color") {
+        switchToTabWithColor(-1);
+    }
+});
