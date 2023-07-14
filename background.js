@@ -1,6 +1,5 @@
 // TODO: Rework debug error logging moving forward
 // TODO: Ensure add\remove works for single tabs, multi-selected tabs, and browser restarts
-// TODO: Document limitation that restored tabs are not given previous tab.id ... so essentially new
 // TODO: Review\rework menu handling algo.  Do we can about disabling any of the item? Leave everything enabled?
 
 'use strict';
