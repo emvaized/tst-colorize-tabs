@@ -1,4 +1,3 @@
-// options.js
 // Load saved options when the page is opened
 function loadOptions() {
     browser.storage.sync.get({
@@ -19,13 +18,10 @@ function loadOptions() {
         document.body.classList.remove("dark-mode");
       }
 
-      // Display a pop-up with the loaded options
-      //alert(`Options loaded successfully:\nColor scheme: ${colorScheme}\nKeyboard behavior: ${keyboardBehavior}`);
-  
       // Log the loaded options to the console
       console.log("Options loaded successfully:");
-      console.log("Color scheme:", colorScheme);
-      console.log("Keyboard behavior:", keyboardBehavior);
+      console.log("  Color scheme:", colorScheme);
+      console.log("  Keyboard behavior:", keyboardBehavior);
     }).catch((error) => {
       console.log("Error loading options:");
       console.log(error);
@@ -37,7 +33,6 @@ function loadOptions() {
     const selectedColorScheme = document.querySelector('input[name="colorScheme"]:checked').value;
     const selectedKeyboardBehavior = document.querySelector('input[name="keyboardBehavior"]:checked').value;
     browser.storage.sync.set({ colorScheme: selectedColorScheme, keyboardBehavior: selectedKeyboardBehavior });
-    //keyboardBehavior = selectedKeyboardBehavior; //mci
 
     // Toggle dark mode class if dark color scheme is selected
     if (selectedColorScheme === "dark") {
@@ -46,13 +41,10 @@ function loadOptions() {
       document.body.classList.remove("dark-mode");
     }    
 
-    // Display a pop-up with the selected options after saving
-    //alert(`Options saved successfully:\nColor scheme: ${selectedColorScheme}\nKeyboard behavior: ${selectedKeyboardBehavior}`);
-  
     // Log the selected options to the console
     console.log("Options saved successfully:");
-    console.log("Color scheme:", selectedColorScheme);
-    console.log("Keyboard behavior:", selectedKeyboardBehavior);
+    console.log("  Color scheme:", selectedColorScheme);
+    console.log("  Keyboard behavior:", selectedKeyboardBehavior);
   }
   
   // Load options when the page is opened
