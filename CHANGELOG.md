@@ -14,7 +14,10 @@ Upcoming 1.1.0
   - Default is "Alt+Down for next" and "Alt+Up for previous"
   - Can change shortcuts via about:addons -> cogwheel -> Manage Extension Shortcuts
   - https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox
-- [TODO] [Add ability to assign keyboard shortcuts for each color](https://github.com/irvinm/TST-Colorize-Tabs/issues/3)
+- [Add ability to assign keyboard shortcuts for each color](https://github.com/irvinm/TST-Colorize-Tabs/issues/3)
+  - Default shortcuts are ALT+(1-8)
+  - ALT+(1-7) for each color and ALT+8 to remove all colors
+  - Should work for individual tabs or all tabs that are currently selected
 - [Add ability to "cycle around" when using keyboard shortcuts](https://github.com/irvinm/TST-Colorize-Tabs/issues/2)
   - New options for light\dark options page
   - New options for keyboard behavior to stop at top\bottom or cycle
