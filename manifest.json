@@ -45,6 +45,54 @@
                 "default": "Alt+Up"
             },
             "description": "Switch to the previous colorized tab"
+        },
+        "red": {
+            "suggested_key": {
+                "default": "Alt+1"
+            },
+            "description": "Color tabs red"
+        },
+        "green": {
+            "suggested_key": {
+                "default": "Alt+2"
+            },
+            "description": "Color tabs green"
+        },
+        "blue": {
+            "suggested_key": {
+                "default": "Alt+3"
+            },
+            "description": "Color tabs blue"
+        },
+        "yellow": {
+            "suggested_key": {
+                "default": "Alt+4"
+            },
+            "description": "Color tabs yellow"
+        },
+        "brown": {
+            "suggested_key": {
+                "default": "Alt+5"
+            },
+            "description": "Color tabs brown"
+        },
+        "purple": {
+            "suggested_key": {
+                "default": "Alt+6"
+            },
+            "description": "Color tabs purple"
+        },
+        "orange": {
+            "suggested_key": {
+                "default": "Alt+7"
+            },
+            "description": "Color tabs orange"
+        },
+        "noColor": {
+            "suggested_key": {
+                "default": "Alt+8"
+            },
+            "description": "Remove all colors"
         }
     }
 }

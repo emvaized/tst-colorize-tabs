@@ -95,10 +95,14 @@ browser.menus.onClicked.addListener(async (info, tab) => {
         return;
 
     const selectedColor = info.menuItemId.replace(/^topLevel_/, '');
+    await processColors(tab, selectedColor);
+});
+
+async function processColors(tab, selectedColor) {
     const multiselectedTabs = await getMultiselectedTabs(tab);
     /// Collect tab ids
     const ids = [];
-    multiselectedTabs.forEach((selectedTab) => { ids.push(selectedTab.id) });
+    multiselectedTabs.forEach((selectedTab) => { ids.push(selectedTab.id); });
 
     switch (selectedColor) {
         case 'noColor': {
@@ -123,7 +127,7 @@ browser.menus.onClicked.addListener(async (info, tab) => {
             break;
         }
     }
-});
+}
 
 /// Set color for passed tabs
 function colorizeTabs(color, ids) {
@@ -332,7 +336,29 @@ browser.commands.onCommand.addListener(function (command) {
     if (command === "next-tab-with-color") {
         switchToTabWithColor(1);
     }
+    
     if (command === "previous-tab-with-color") {
         switchToTabWithColor(-1);
+    }
+
+    // Define a regular expression pattern to match for color commands
+    const colorRegex = /red|green|blue|yellow|brown|purple|orange|noColor/;
+
+    // Use the regular expression to test if the command matches the pattern
+    const match = command.match(colorRegex);
+
+    if (match) {
+        // Get the current tab using the 'active: true' query option
+        browser.tabs.query({ active: true, currentWindow: true })
+        .then((tabs) => {
+            if (tabs.length > 0) {
+                processColors(tabs[0], command);
+            } else {
+            console.log('No active tab found.');
+            }
+        })
+        .catch((error) => {
+            console.error('Error getting current tab:', error);
+        });
     }
 });
