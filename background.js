@@ -18,6 +18,26 @@ const availableColors = {
     'orange': `rgba(255, 69, 0, ${colorOpacity})`,
 };
 
+// Define cycle constants
+const BEHAVIOR_STOP_AT_TOP_BOTTOM = "stop";
+const BEHAVIOR_CYCLE_AROUND = "cycle";
+
+// Define color scheme constants
+const COLOR_SCHEME_LIGHT = "light";
+const COLOR_SCHEME_DARK = "dark";
+
+let colorScheme = COLOR_SCHEME_DARK;
+var keyboardBehavior = BEHAVIOR_STOP_AT_TOP_BOTTOM;
+
+// Load user preferences from storage
+browser.storage.sync.get({
+    colorScheme: COLOR_SCHEME_DARK,
+    keyboardBehavior: BEHAVIOR_STOP_AT_TOP_BOTTOM,
+  }).then((result) => {
+    colorScheme = result.colorScheme;
+    keyboardBehavior = result.keyboardBehavior;
+  });
+  
 /// Create menu
 const menuItemDefinitionsById = {
     topLevel_colorizeTab: {
@@ -268,12 +288,36 @@ function switchToTabWithColor(direction) {
 
         // Find the next or previous tab with color
         let targetTabIndex = -1;
-        for (let i = currentTabIndex + direction; i >= 0 && i < tabs.length; i += direction) {
-            //console.log("Tab Index = " + i + ", Tab.id = " + tabs[i].id + ",: Name -> (" + tabs[i].title + ")");
-            if (colorizedTabs.has(tabs[i].id)) {
-                console.log("Moving tab -> targetTabIndex = " + i + ", Tab.id = " + tabs[i].id, ": Name -> (" + tabs[i].title + ")");
-                targetTabIndex = i;
-                break;
+
+        browser.storage.sync.get({
+            keyboardBehavior: BEHAVIOR_STOP_AT_TOP_BOTTOM,
+          }).then((result) => {
+            keyboardBehavior = result.keyboardBehavior;
+          });
+
+        if (keyboardBehavior === BEHAVIOR_CYCLE_AROUND) {
+            // Cycle around behavior
+            for (let i = currentTabIndex + direction; ; i += direction) {
+                if (i >= tabs.length) {
+                    i = 0;
+                } else if (i < 0) {
+                    i = tabs.length - 1;
+                }
+
+                if (colorizedTabs.has(tabs[i].id)) {
+                    console.log("Moving tab -> targetTabIndex = " + i + ", Tab.id = " + tabs[i].id, ": Name -> (" + tabs[i].title + ")");
+                    targetTabIndex = i;
+                    break;
+                }
+            }
+        } else {
+            // Stop at the top or bottom behavior (default)
+            for (let i = currentTabIndex + direction; i >= 0 && i < tabs.length; i += direction) {
+                if (colorizedTabs.has(tabs[i].id)) {
+                    console.log("Moving tab -> targetTabIndex = " + i + ", Tab.id = " + tabs[i].id, ": Name -> (" + tabs[i].title + ")");
+                    targetTabIndex = i;
+                    break;
+                }
             }
         }
 
