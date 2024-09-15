@@ -18,7 +18,7 @@
     },
     "browser_specific_settings": {
         "gecko": {
-            "id": "TST-Colorize-Tabs@irvinm.addons.mozilla.org"
+            "id": "tst_colorize_tabs@emvaized.com"
         }
     },
     "background": {
