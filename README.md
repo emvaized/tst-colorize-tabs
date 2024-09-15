@@ -36,6 +36,8 @@ Here are default style rules for each color, which you could override in Tree St
 
 ## Default hotkeys
 
+You can change shortcuts via about:addons -> Cogwheel -> Manage Extension Shortcuts ([guide](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox))
+
 - <kbd>Alt</kbd>+<kbd>1</kbd>: Set red color for selected tabs
 - <kbd>Alt</kbd>+<kbd>2</kbd>: Set green color for selected tabs
 - <kbd>Alt</kbd>+<kbd>3</kbd>: Set blue color for selected tabs
