@@ -6,7 +6,7 @@
     "description": "__MSG_extensionDescription__",
     "homepage_url": "https://github.com/irvinm/TST-Colorize-Tabs",
     "options_ui": {
-        "page": "options/ptions.html",
+        "page": "options/options.html",
         "browser_style": true
     },
     "browser_action": {
