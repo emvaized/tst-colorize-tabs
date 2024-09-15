@@ -1,7 +1,7 @@
-![CI/CD](https://github.com/irvinm/TST-Colorize-Tabs/workflows/CI/CD/badge.svg)
 [![Mozilla Add-on Version](https://img.shields.io/amo/v/tst-colorize-tabs?label=version&color=blue)](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
 [![Mozilla Add-on](https://img.shields.io/amo/users/tst-colorize-tabs?color=%23FF6611&label=users&logo=Firefox)](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
 [![Mozilla Add-on Stars](https://img.shields.io/amo/stars/tst-colorize-tabs)](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
+![CI/CD](https://github.com/irvinm/TST-Colorize-Tabs/workflows/CI/CD/badge.svg)
 
 # <sub align="bottom"><img height="40px" src="./src/images/color.png"></sub> TST Colorize Tabs
 
@@ -62,6 +62,14 @@ Here are default style rules for each color, which you could override in Tree St
     background-color: rgba(255,69,0,0.2) !important;
 }
 ```
+
+## Contribution
+Any contributions are welcome! Please feel free to fork this extension and create pull request to suggest your changes.
+
+Few ideas to work on: 
+- [ ] Ability to change color values on a settings page instead of using CSS (https://github.com/emvaized/tst-colorize-tabs/issues/9)
+- [ ] Apply 'light/dark' mode to the CSS color values as well, so that users could specifiy different colors for dark mode
+- [ ] List all colorized tabs in the extension popup, with switch to tab on click
 
 -----
 
