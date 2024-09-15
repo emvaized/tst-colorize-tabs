@@ -21,7 +21,7 @@ Check out his addon [TST Lock](https://github.com/irvinm/TST-Lock)
 
 ## How to change colors
 
-* To customize colors, you can use TreeStyleTab's custom CSS.
+To customize colors, you can use TreeStyleTab's custom CSS.
 Here are default style rules for each color, which you could override in Tree Style Tabs settings:
 
 ```
