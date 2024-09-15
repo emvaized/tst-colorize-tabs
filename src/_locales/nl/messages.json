@@ -1,86 +1,86 @@
 {
-    "extensionDescription": {
-        "message": "Met deze extensie kunt u ieder tabblad van een individuele kleur voorzien",
-        "description": "This extension allows to set individual color for each tab in order to highlight it"
-    },
-    "green": {
-        "message": "Groen",
-        "description": "Green"
-    },
-    "red": {
-        "message": "Rood",
-        "description": "Red"
+    "auto": {
+        "description": "Auto",
+        "message": "Automatisch"
     },
     "blue": {
-        "message": "Blauw",
-        "description": "Blue"
+        "description": "Blue",
+        "message": "Blauw"
     },
     "brown": {
-        "message": "Bruin",
-        "description": "Brown"
-    },
-    "yellow": {
-        "message": "Geel",
-        "description": "Yellow"
-    },
-    "purple": {
-        "message": "Paars",
-        "description": "Purple"
-    },
-    "orange": {
-        "message": "Oranje",
-        "description": "Orange"
-    },
-    "noColor": {
-        "message": "Geen kleur",
-        "description": "No color"
+        "description": "Brown",
+        "message": "Bruin"
     },
     "chooseColor": {
-        "message": "Kies een kleur",
-        "description": "Choose color"
+        "description": "Choose color",
+        "message": "Kies een kleur"
     },
     "color": {
-        "message": "Kleur",
-        "description": "Color"
-    },
-    "settings": {
-        "message": "Instellingen",
-        "description": "Settings"
-    },
-    "selectColorCheme": {
-        "message": "Selecteer je voorkeur kleurenschema:",
-        "description": "Select your preferred color scheme:"
-    },
-    "auto": {
-        "message": "Automatisch",
-        "description": "Auto"
-    },
-    "light": {
-        "message": "Licht",
-        "description": "Light"
+        "description": "Color",
+        "message": "Kleur"
     },
     "dark": {
-        "message": "Donker",
-        "description": "Dark"
+        "description": "Dark",
+        "message": "Donker"
     },
-    "selectKeyboardBehavior": {
-        "message": "Selecteer je voorkeur toetsenbordgedrag:",
-        "description": "Select your preferred keyboard behavior"
-    },
-    "keyboardStop": {
-        "message": "Stoppen bovenaan of onderaan",
-        "description": "Stop at the top or bottom"
-    },
-    "keyboardCycle": {
-        "message": "Doorgaan in een lus",
-        "description": "Cycle around"
-    },
-    "writeReview": {
-        "message": "Schrijf een beoordeling",
-        "description": "Write a review"
+    "extensionDescription": {
+        "description": "This extension allows to set individual color for each tab in order to highlight it",
+        "message": "Met deze extensie kunt u ieder tabblad van een individuele kleur voorzien"
     },
     "githubPage": {
-        "message": "Github-pagina",
-        "description": "Github page"
+        "description": "Github page",
+        "message": "Github-pagina"
+    },
+    "green": {
+        "description": "Green",
+        "message": "Groen"
+    },
+    "keyboardCycle": {
+        "description": "Cycle around",
+        "message": "Doorgaan in een lus"
+    },
+    "keyboardStop": {
+        "description": "Stop at the top or bottom",
+        "message": "Stoppen bovenaan of onderaan"
+    },
+    "light": {
+        "description": "Light",
+        "message": "Licht"
+    },
+    "noColor": {
+        "description": "No color",
+        "message": "Geen kleur"
+    },
+    "orange": {
+        "description": "Orange",
+        "message": "Oranje"
+    },
+    "purple": {
+        "description": "Purple",
+        "message": "Paars"
+    },
+    "red": {
+        "description": "Red",
+        "message": "Rood"
+    },
+    "selectColorCheme": {
+        "description": "Select your preferred color scheme:",
+        "message": "Selecteer je voorkeur kleurenschema:"
+    },
+    "selectKeyboardBehavior": {
+        "description": "Select your preferred keyboard behavior",
+        "message": "Selecteer je voorkeur toetsenbordgedrag:"
+    },
+    "settings": {
+        "description": "Settings",
+        "message": "Instellingen"
+    },
+    "writeReview": {
+        "description": "Write a review",
+        "message": "Schrijf een beoordeling"
+    },
+    "yellow": {
+        "description": "Yellow",
+        "message": "Geel"
     }
 }

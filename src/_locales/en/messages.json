@@ -1,12 +1,6 @@
 {
-    "extensionDescription": {
-        "message": "This extension allows to set individual color for each tab in order to highlight it"
-    },
-    "green": {
-        "message": "Green"
-    },
-    "red": {
-        "message": "Red"
+    "auto": {
+        "message": "Auto"
     },
     "blue": {
         "message": "Blue"
@@ -14,52 +8,58 @@
     "brown": {
         "message": "Brown"
     },
-    "yellow": {
-        "message": "Yellow"
-    },
-    "purple": {
-        "message": "Purple"
-    },
-    "orange": {
-        "message": "Orange"
-    },
-    "noColor": {
-        "message": "No color"
-    },
     "chooseColor": {
         "message": "Choose color"
     },
     "color": {
         "message": "Color"
     },
-    "settings": {
-        "message": "Settings"
-    },
-    "selectColorCheme": {
-        "message": "Select your preferred color scheme:"
-    },
-    "auto": {
-        "message": "Auto"
-    },
-    "light": {
-        "message": "Light"
-    },
     "dark": {
         "message": "Dark"
     },
-    "selectKeyboardBehavior": {
-        "message": "Select your preferred keyboard behavior:"
+    "extensionDescription": {
+        "message": "This extension allows to set individual color for each tab in order to highlight it"
     },
-    "keyboardStop": {
-        "message": "Stop at the top or bottom"
+    "githubPage": {
+        "message": "Github page"
+    },
+    "green": {
+        "message": "Green"
     },
     "keyboardCycle": {
         "message": "Cycle around"
     },
+    "keyboardStop": {
+        "message": "Stop at the top or bottom"
+    },
+    "light": {
+        "message": "Light"
+    },
+    "noColor": {
+        "message": "No color"
+    },
+    "orange": {
+        "message": "Orange"
+    },
+    "purple": {
+        "message": "Purple"
+    },
+    "red": {
+        "message": "Red"
+    },
+    "selectColorCheme": {
+        "message": "Select your preferred color scheme:"
+    },
+    "selectKeyboardBehavior": {
+        "message": "Select your preferred keyboard behavior:"
+    },
+    "settings": {
+        "message": "Settings"
+    },
     "writeReview": {
         "message": "Write a review"
     },
-    "githubPage": {
-        "message": "Github page"
+    "yellow": {
+        "message": "Yellow"
     }
 }

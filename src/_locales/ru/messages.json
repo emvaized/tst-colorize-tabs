@@ -1,86 +1,86 @@
 {
-    "extensionDescription": {
-        "message": "Это расширение позволяет установить свой цвет для каждой вкладки, чтобы выделить её",
-        "description": "This extension allows to set individual color for each tab in order to highlight it"
-    },
-    "green": {
-        "message": "Зеленый",
-        "description": "Green"
-    },
-    "red": {
-        "message": "Красный",
-        "description": "Red"
-    },
-    "brown": {
-        "message": "Коричневый",
-        "description": "Brown"
+    "auto": {
+        "description": "Auto",
+        "message": "Авто"
     },
     "blue": {
-        "message": "Голубой",
-        "description": "Blue"
+        "description": "Blue",
+        "message": "Голубой"
     },
-    "yellow": {
-        "message": "Желтый",
-        "description": "Yellow"
-    },
-    "orange": {
-        "message": "Оранжевый",
-        "description": "Orange"
-    },
-    "noColor": {
-        "message": "Без цвета",
-        "description": "No color"
+    "brown": {
+        "description": "Brown",
+        "message": "Коричневый"
     },
     "chooseColor": {
-        "message": "Выбрать цвет",
-        "description": "Choose color"
-    },
-    "purple": {
-        "message": "Фиолетовый",
-        "description": "Фиолетовый"
+        "description": "Choose color",
+        "message": "Выбрать цвет"
     },
     "color": {
-        "message": "Цвет",
-        "description": "Color"
-    },
-    "settings": {
-        "message": "Настройки",
-        "description": "Settings"
-    },
-    "selectColorCheme": {
-        "message": "Выберите предпочитаемую цветовую схему:",
-        "description": "Select your preferred color scheme:"
-    },
-    "auto": {
-        "message": "Авто",
-        "description": "Auto"
-    },
-    "light": {
-        "message": "Светлая",
-        "description": "Light"
+        "description": "Color",
+        "message": "Цвет"
     },
     "dark": {
-        "message": "Темная",
-        "description": "Dark"
+        "description": "Dark",
+        "message": "Темная"
     },
-    "selectKeyboardBehavior": {
-        "message": "Выберите предпочитаемое поведение клавиатуры:",
-        "description": "Select your preferred keyboard behavior:"
-    },
-    "keyboardStop": {
-        "message": "Остановка вверху или внизу",
-        "description": "Stop at the top or bottom"
-    },
-    "keyboardCycle": {
-        "message": "Циклическое переключение",
-        "description": "Cycle around"
-    },
-    "writeReview": {
-        "message": "Написать отзыв",
-        "description": "Write a review"
+    "extensionDescription": {
+        "description": "This extension allows to set individual color for each tab in order to highlight it",
+        "message": "Это расширение позволяет установить свой цвет для каждой вкладки, чтобы выделить её"
     },
     "githubPage": {
-        "message": "Страница на Github",
-        "description": "Github page"
+        "description": "Github page",
+        "message": "Страница на Github"
+    },
+    "green": {
+        "description": "Green",
+        "message": "Зеленый"
+    },
+    "keyboardCycle": {
+        "description": "Cycle around",
+        "message": "Циклическое переключение"
+    },
+    "keyboardStop": {
+        "description": "Stop at the top or bottom",
+        "message": "Остановка вверху или внизу"
+    },
+    "light": {
+        "description": "Light",
+        "message": "Светлая"
+    },
+    "noColor": {
+        "description": "No color",
+        "message": "Без цвета"
+    },
+    "orange": {
+        "description": "Orange",
+        "message": "Оранжевый"
+    },
+    "purple": {
+        "description": "Фиолетовый",
+        "message": "Фиолетовый"
+    },
+    "red": {
+        "description": "Red",
+        "message": "Красный"
+    },
+    "selectColorCheme": {
+        "description": "Select your preferred color scheme:",
+        "message": "Выберите предпочитаемую цветовую схему:"
+    },
+    "selectKeyboardBehavior": {
+        "description": "Select your preferred keyboard behavior:",
+        "message": "Выберите предпочитаемое поведение клавиатуры:"
+    },
+    "settings": {
+        "description": "Settings",
+        "message": "Настройки"
+    },
+    "writeReview": {
+        "description": "Write a review",
+        "message": "Написать отзыв"
+    },
+    "yellow": {
+        "description": "Yellow",
+        "message": "Желтый"
     }
 }

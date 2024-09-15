@@ -1,86 +1,86 @@
 {
-    "extensionDescription": {
-        "message": "Esta extensión permite establecer un color individual para cada pestaña para resaltarla",
-        "description": "This extension allows to set individual color for each tab in order to highlight it"
-    },
-    "green": {
-        "message": "Verde",
-        "description": "Green"
-    },
-    "red": {
-        "message": "Roja",
-        "description": "Red"
+    "auto": {
+        "description": "Auto",
+        "message": "Automático"
     },
     "blue": {
-        "message": "Azul",
-        "description": "Blue"
+        "description": "Blue",
+        "message": "Azul"
     },
     "brown": {
-        "message": "Marrón",
-        "description": "Brown"
-    },
-    "yellow": {
-        "message": "Amarilla",
-        "description": "Yellow"
-    },
-    "purple": {
-        "message": "Morada",
-        "description": "Purple"
-    },
-    "orange": {
-        "message": "Naranja",
-        "description": "Orange"
-    },
-    "noColor": {
-        "message": "Sin color",
-        "description": "No color"
+        "description": "Brown",
+        "message": "Marrón"
     },
     "chooseColor": {
-        "message": "Elegir color",
-        "description": "Choose color"
+        "description": "Choose color",
+        "message": "Elegir color"
     },
     "color": {
-        "message": "Color",
-        "description": "Color"
-    },
-    "settings": {
-        "message": "Configuración",
-        "description": "Settings"
-    },
-    "selectColorCheme": {
-        "message": "Selecciona tu esquema de color preferido:",
-        "description": "Select your preferred color scheme:"
-    },
-    "auto": {
-        "message": "Automático",
-        "description": "Auto"
-    },
-    "light": {
-        "message": "Claro",
-        "description": "Light"
+        "description": "Color",
+        "message": "Color"
     },
     "dark": {
-        "message": "Oscuro",
-        "description": "Dark"
+        "description": "Dark",
+        "message": "Oscuro"
     },
-    "selectKeyboardBehavior": {
-        "message": "Selecciona tu comportamiento preferido del teclado:",
-        "description": "Select your preferred keyboard behavior:"
-    },
-    "keyboardStop": {
-        "message": "Detener en la parte superior o inferior",
-        "description": "Stop at the top or bottom"
-    },
-    "keyboardCycle": {
-        "message": "Ciclar continuamente",
-        "description": "Cycle around"
-    },
-    "writeReview": {
-        "message": "Escribir una reseña",
-        "description": "Write a review"
+    "extensionDescription": {
+        "description": "This extension allows to set individual color for each tab in order to highlight it",
+        "message": "Esta extensión permite establecer un color individual para cada pestaña para resaltarla"
     },
     "githubPage": {
-        "message": "Página de Github",
-        "description": "Github page"
+        "description": "Github page",
+        "message": "Página de Github"
+    },
+    "green": {
+        "description": "Green",
+        "message": "Verde"
+    },
+    "keyboardCycle": {
+        "description": "Cycle around",
+        "message": "Ciclar continuamente"
+    },
+    "keyboardStop": {
+        "description": "Stop at the top or bottom",
+        "message": "Detener en la parte superior o inferior"
+    },
+    "light": {
+        "description": "Light",
+        "message": "Claro"
+    },
+    "noColor": {
+        "description": "No color",
+        "message": "Sin color"
+    },
+    "orange": {
+        "description": "Orange",
+        "message": "Naranja"
+    },
+    "purple": {
+        "description": "Purple",
+        "message": "Morada"
+    },
+    "red": {
+        "description": "Red",
+        "message": "Roja"
+    },
+    "selectColorCheme": {
+        "description": "Select your preferred color scheme:",
+        "message": "Selecciona tu esquema de color preferido:"
+    },
+    "selectKeyboardBehavior": {
+        "description": "Select your preferred keyboard behavior:",
+        "message": "Selecciona tu comportamiento preferido del teclado:"
+    },
+    "settings": {
+        "description": "Settings",
+        "message": "Configuración"
+    },
+    "writeReview": {
+        "description": "Write a review",
+        "message": "Escribir una reseña"
+    },
+    "yellow": {
+        "description": "Yellow",
+        "message": "Amarilla"
     }
 }

@@ -1,86 +1,86 @@
 {
-    "extensionDescription": {
-        "message": "Цей додаток дозволяє встановити індивідуальний колір для кожної вкладки, щоб виділити її",
-        "description": "This extension allows to set individual color for each tab in order to highlight it"
-    },
-    "green": {
-        "message": "Зелений",
-        "description": "Green"
-    },
-    "red": {
-        "message": "Червоний",
-        "description": "Red"
+    "auto": {
+        "description": "Auto",
+        "message": "Автоматично"
     },
     "blue": {
-        "message": "Голубий",
-        "description": "Blue"
+        "description": "Blue",
+        "message": "Голубий"
     },
     "brown": {
-        "message": "Коричневий",
-        "description": "Brown"
-    },
-    "yellow": {
-        "message": "Жовтий",
-        "description": "Yellow"
-    },
-    "purple": {
-        "message": "Фіолетовий",
-        "description": "Purple"
-    },
-    "orange": {
-        "message": "Помаранчевий",
-        "description": "Orange"
-    },
-    "noColor": {
-        "message": "Без кольору",
-        "description": "No color"
+        "description": "Brown",
+        "message": "Коричневий"
     },
     "chooseColor": {
-        "message": "Вибрати колір",
-        "description": "Choose color"
+        "description": "Choose color",
+        "message": "Вибрати колір"
     },
     "color": {
-        "message": "Колір",
-        "description": "Color"
-    },
-    "settings": {
-        "message": "Налаштування",
-        "description": "Settings"
-    },
-    "selectColorCheme": {
-        "message": "Виберіть бажану кольорову схему:",
-        "description": "Select your preferred color scheme:"
-    },
-    "auto": {
-        "message": "Автоматично",
-        "description": "Auto"
-    },
-    "light": {
-        "message": "Світла",
-        "description": "Light"
+        "description": "Color",
+        "message": "Колір"
     },
     "dark": {
-        "message": "Темна",
-        "description": "Dark"
+        "description": "Dark",
+        "message": "Темна"
     },
-    "selectKeyboardBehavior": {
-        "message": "Виберіть бажану поведінку клавіатури:",
-        "description": "Select your preferred keyboard behavior"
-    },
-    "keyboardStop": {
-        "message": "Зупинка зверху або знизу",
-        "description": "Stop at the top or bottom"
-    },
-    "keyboardCycle": {
-        "message": "Циклічне перемикання",
-        "description": "Cycle around"
-    },
-    "writeReview": {
-        "message": "Написати відгук",
-        "description": "Write a review"
+    "extensionDescription": {
+        "description": "This extension allows to set individual color for each tab in order to highlight it",
+        "message": "Цей додаток дозволяє встановити індивідуальний колір для кожної вкладки, щоб виділити її"
     },
     "githubPage": {
-        "message": "Сторінка на Github",
-        "description": "Github page"
+        "description": "Github page",
+        "message": "Сторінка на Github"
+    },
+    "green": {
+        "description": "Green",
+        "message": "Зелений"
+    },
+    "keyboardCycle": {
+        "description": "Cycle around",
+        "message": "Циклічне перемикання"
+    },
+    "keyboardStop": {
+        "description": "Stop at the top or bottom",
+        "message": "Зупинка зверху або знизу"
+    },
+    "light": {
+        "description": "Light",
+        "message": "Світла"
+    },
+    "noColor": {
+        "description": "No color",
+        "message": "Без кольору"
+    },
+    "orange": {
+        "description": "Orange",
+        "message": "Помаранчевий"
+    },
+    "purple": {
+        "description": "Purple",
+        "message": "Фіолетовий"
+    },
+    "red": {
+        "description": "Red",
+        "message": "Червоний"
+    },
+    "selectColorCheme": {
+        "description": "Select your preferred color scheme:",
+        "message": "Виберіть бажану кольорову схему:"
+    },
+    "selectKeyboardBehavior": {
+        "description": "Select your preferred keyboard behavior",
+        "message": "Виберіть бажану поведінку клавіатури:"
+    },
+    "settings": {
+        "description": "Settings",
+        "message": "Налаштування"
+    },
+    "writeReview": {
+        "description": "Write a review",
+        "message": "Написати відгук"
+    },
+    "yellow": {
+        "description": "Yellow",
+        "message": "Жовтий"
     }
 }
