@@ -1,15 +1,24 @@
 ![CI/CD](https://github.com/irvinm/TST-Colorize-Tabs/workflows/CI/CD/badge.svg)
+[![Mozilla Add-on Version](https://img.shields.io/amo/v/tst-colorize-tabs?label=version&color=blue)](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
+[![Mozilla Add-on](https://img.shields.io/amo/users/tst-colorize-tabs?color=%23FF6611&label=users&logo=Firefox)](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
+[![Mozilla Add-on Stars](https://img.shields.io/amo/stars/tst-colorize-tabs)](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
 
-## Original Information
+# <sub><img height="40px" src="./images/color.png"></sub> TST Colorize Tabs
 
-[Original TST Colorize Tabs Firefox Addon](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
+<a href="https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get for Firefox"></a>
 
-This extension allows to set individual color for each tab in order to highlight them. Currently available colors: red, green, blue, yellow, brown, purple, orange. [TreeStyleTabs](https://addons.mozilla.org/firefox/addon/tree-style-tab/) extension is required for it to run.
+This extension allows to set individual color for each tab in order to highlight them. Currently available colors: red, green, blue, yellow, brown, purple, orange. [TreeStyleTabs](https://addons.mozilla.org/firefox/addon/tree-style-tab/) extension is required for it to run. 
 
-Extension may conflict with other extensions which change tabs color, such as [VivaldiFox](https://addons.mozilla.org/firefox/addon/vivaldifox/) or [TST Colored Tabs](https://addons.mozilla.org/firefox/addon/tst-colored-tabs/)
+Huge thanks to [@irvinm](https://github.com/irvinm) for many contributions to this project 🎉
+Check out his addon [TST Lock](https://github.com/irvinm/TST-Lock)
 
-To customize colors, you can use TreeStyleTab's custom CSS.
-Here are default style rules for each color, which you could override in TST settings:
+- Extension may conflict with other extensions which change tabs color, such as [VivaldiFox](https://addons.mozilla.org/firefox/addon/vivaldifox/) or [TST Colored Tabs](https://addons.mozilla.org/firefox/addon/tst-colored-tabs/)
+
+- When you close a tab or window and then use Firefox to "restore" these tabs, they will not have the original Tab IDs assigned.  Because of this (and no great way of mapping "new tabs created\restored" to old closed tabs), once you close a tab\window, the associated color information will be deleted.  
+**This means any restored tabs will not have their color information retained and will be treated as "new".**
+
+* To customize colors, you can use TreeStyleTab's custom CSS.
+Here are default style rules for each color, which you could override in Tree Style Tabs settings (custom CSS section):
 
 ```
 .tab.self-colored-red tab-item-substance { background-color: rgba(255,0,0,0.2) !important; }
@@ -21,15 +30,6 @@ Here are default style rules for each color, which you could override in TST set
 .tab.self-colored-orange tab-item-substance { background-color: rgba(255,69,0,0.2) !important; }
 ```
 
------
-
-## New Information
-
-I started this just as an experiment to try to fix the "loses color information on restart" (https://github.com/emvaized/tst-colorize-tabs/issues/8).  This addon's primary change is the migration from using browser.storage.local.set\get to browser.sessions.getTabValue\setTabValue.  This change seems to make the handling of the color information easier by only storing tab IDs with colors associated with them and these are tied to session management.  With this implementation, there is no need to do anything with indexes.  I used this method with my "[TST Lock](https://github.com/irvinm/TST-Lock)" addon and never had any problems with losing lock information between restarts.
-
-LIMITATION:  When you close a tab or window and then use Firefox to "restore" these tabs, they will not have the original Tab IDs assigned.  Because of this (and no great way of mapping "new tabs created\restored" to old closed tabs), once you close a tab\window, the associated color information will be deleted.  
-
-** This means any restored tabs will not have their color information retained and will be treated as "new".
 
 -----
 
