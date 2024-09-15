@@ -34,7 +34,7 @@ Here are default style rules for each color, which you could override in Tree St
 .tab.self-colored-orange tab-item-substance { background-color: rgba(255,69,0,0.2) !important; }
 ```
 
-## Default hotkeys
+## Keyboard hotkeys
 
 You can change shortcuts via about:addons -> Cogwheel -> Manage Extension Shortcuts ([guide](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox))
 
