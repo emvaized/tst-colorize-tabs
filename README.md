@@ -14,6 +14,8 @@ Check out his addon [TST Lock](https://github.com/irvinm/TST-Lock)
 
 ---
 
+## Important notes
+
 - Extension may conflict with other extensions which change tabs color, such as [VivaldiFox](https://addons.mozilla.org/firefox/addon/vivaldifox/) or [TST Colored Tabs](https://addons.mozilla.org/firefox/addon/tst-colored-tabs/)
 
 - When you close a tab or window and then use Firefox to "restore" these tabs, they will not have the original Tab IDs assigned.  Because of this (and no great way of mapping "new tabs created\restored" to old closed tabs), once you close a tab\window, the associated color information will be deleted.  
