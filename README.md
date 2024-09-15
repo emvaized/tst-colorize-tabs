@@ -3,14 +3,16 @@
 [![Mozilla Add-on](https://img.shields.io/amo/users/tst-colorize-tabs?color=%23FF6611&label=users&logo=Firefox)](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
 [![Mozilla Add-on Stars](https://img.shields.io/amo/stars/tst-colorize-tabs)](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
 
-# <sub><img height="40px" src="./images/color.png"></sub> TST Colorize Tabs
+# <sub align="bottom"><img height="40px" src="./images/color.png"></sub> TST Colorize Tabs
+
+> Huge thanks to [@irvinm](https://github.com/irvinm) for many contributions to this project! 🎉
+Check out his addon [TST Lock](https://github.com/irvinm/TST-Lock)
 
 This extension allows to set individual color for each tab in order to highlight them. Currently available colors: red, green, blue, yellow, brown, purple, orange. [TreeStyleTabs](https://addons.mozilla.org/firefox/addon/tree-style-tab/) extension is required for it to run. 
 
 <a href="https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get for Firefox"></a>
 
-Huge thanks to [@irvinm](https://github.com/irvinm) for many contributions to this project! 🎉
-Check out his addon [TST Lock](https://github.com/irvinm/TST-Lock)
+
 
 
 ## Important notes
@@ -36,4 +38,4 @@ Here are default style rules for each color, which you could override in Tree St
 
 -----
 
-color.png provided by:  <a href="https://www.flaticon.com/free-icons/color-wheel" title="color wheel icons">Color wheel icons created by Hasymi - Flaticon</a>
+Extension logo (color.png) provided by:  <a href="https://www.flaticon.com/free-icons/color-wheel" title="color wheel icons">Color wheel icons created by Hasymi - Flaticon</a>
