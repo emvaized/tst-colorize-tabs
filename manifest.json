@@ -90,7 +90,7 @@
         },
         "noColor": {
             "suggested_key": {
-                "default": "Alt+8"
+                "default": "Alt+0"
             },
             "description": "Remove all colors"
         }
