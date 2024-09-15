@@ -1,6 +1,7 @@
-## Upcoming 2.0.0
+## 2.0.0
 
-Thanks to [@irvinm](https://github.com/irvinm) for contributions! 🎉
+Thanks to [@irvinm](https://github.com/irvinm) for all his contributions! 🎉
+- Migrated extension to use [browser.sessions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions) API for storing tab colors instead of saving tab indexes in storage
 - Fixed issues with tab colors not saved on browser restore (https://github.com/emvaized/tst-colorize-tabs/issues/8)
 - Fixed problem with tab colors applied in several windows at once (https://github.com/emvaized/tst-colorize-tabs/issues/7)
 - Added addon icon - Attribution to Flaticon creator Hasymi
@@ -12,6 +13,14 @@ Thanks to [@irvinm](https://github.com/irvinm) for contributions! 🎉
 - Added options page, which can be seen by clicking on addon icon or about:addons -> Options
   - Switch between light/dark appearance
   - Switch keyboard behavior to stop at top/bottom or cycle (https://github.com/irvinm/TST-Colorize-Tabs/issues/2)
+
+--- 
+
+- Fixed broken "red" icon, which increased overall extension size
+- Added "auto" options page appearance
+- Added footer buttons to the options page
+- Added legacy onLoad handler to migrate tab colors from `v1.0`
+- Cleaned up project structure and code
 
 ## 1.0.2
 - Added Dutch translation

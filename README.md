@@ -19,6 +19,21 @@ Check out his addon [TST Lock](https://github.com/irvinm/TST-Lock)
 - When you close a tab or window and then use Firefox to "restore" these tabs, they will not have the original Tab IDs assigned.  Because of this (and no great way of mapping "new tabs created\restored" to old closed tabs), once you close a tab\window, the associated color information will be deleted.  
 **This means any restored tabs will not have their color information retained and will be treated as "new".**
 
+## Keyboard hotkeys
+
+You can change shortcuts via `about:addons` -> Cogwheel -> Manage Extension Shortcuts ([guide](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox))
+
+- <kbd>Alt</kbd> + <kbd>1</kbd> – Set red color for selected tabs
+- <kbd>Alt</kbd> + <kbd>2</kbd> – Set green color for selected tabs
+- <kbd>Alt</kbd> + <kbd>3</kbd> – Set blue color for selected tabs
+- <kbd>Alt</kbd> + <kbd>4</kbd> – Set yellow color for selected tabs
+- <kbd>Alt</kbd> + <kbd>5</kbd> – Set brown color for selected tabs
+- <kbd>Alt</kbd> + <kbd>6</kbd> – Set purple color for selected tabs
+- <kbd>Alt</kbd> + <kbd>7</kbd> – Set orange color for selected tabs
+- <kbd>Alt</kbd> + <kbd>0</kbd> – Remove color from selected tabs
+- <kbd>Alt</kbd> + <kbd>Down</kbd> – Switch to the next colorized tab
+- <kbd>Alt</kbd> + <kbd>Up</kbd> – Switch to the previous colorized tab
+
 ## How to change colors
 
 To customize colors, you can use TreeStyleTab's custom CSS.
@@ -47,22 +62,6 @@ Here are default style rules for each color, which you could override in Tree St
     background-color: rgba(255,69,0,0.2) !important;
 }
 ```
-
-## Keyboard hotkeys
-
-You can change shortcuts via about:addons -> Cogwheel -> Manage Extension Shortcuts ([guide](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox))
-
-- <kbd>Alt</kbd>+<kbd>1</kbd>: Set red color for selected tabs
-- <kbd>Alt</kbd>+<kbd>2</kbd>: Set green color for selected tabs
-- <kbd>Alt</kbd>+<kbd>3</kbd>: Set blue color for selected tabs
-- <kbd>Alt</kbd>+<kbd>4</kbd>: Set yellow color for selected tabs
-- <kbd>Alt</kbd>+<kbd>5</kbd>: Set brown color for selected tabs
-- <kbd>Alt</kbd>+<kbd>6</kbd>: Set purple color for selected tabs
-- <kbd>Alt</kbd>+<kbd>7</kbd>: Set orange color for selected tabs
-- <kbd>Alt</kbd>+<kbd>0</kbd>: Remove color from selected tabs
-- <kbd>Alt</kbd>+<kbd>Down</kbd>: Switch to the next colorized tab
-- <kbd>Alt</kbd>+<kbd>Up</kbd>: Switch to the previous colorized tab
-
 
 -----
 
