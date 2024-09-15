@@ -12,7 +12,6 @@ This extension allows to set individual color for each tab in order to highlight
 Huge thanks to [@irvinm](https://github.com/irvinm) for many contributions to this project! 🎉
 Check out his addon [TST Lock](https://github.com/irvinm/TST-Lock)
 
-<br>
 
 ## Important notes
 
