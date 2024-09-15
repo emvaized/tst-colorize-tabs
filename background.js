@@ -264,15 +264,31 @@ registerToTST().then(res => {
 function loadColorizedTabs() {
 
     console.log("TST-Colorize-Tabs: Loading previous tabs into array");
-    browser.tabs.query({}).then((tabs) => {
 
-        for (const tab of tabs) {
+    browser.storage.local.get("userColoredTabs").then((results) => {
+        /// Load tabs colors stored from v1.0
+        if (results.userColoredTabs != undefined) {
+            console.log('Loaded legacy colorized tabs from storage:');
+            console.log(results.userColoredTabs);
 
-            browser.sessions.getTabValue(tab.id, "color").then((color) => {
-
-                if (color != undefined) {
-                    // console.log("TST-Colorize-Tabs: Color tab " + tab.id + " to color " + color);
-                    colorizeTabs(color, tab.id);
+            for (const tabInfo of results.userColoredTabs) {
+                browser.tabs.query({ index: parseInt(tabInfo.index) }).then((tabs) => {
+                    if (tabs.length < 1) return;
+                    colorizeTabs(tabInfo.color, [tabs[0].id]);
+                })
+            }
+            browser.storage.local.remove("userColoredTabs");
+        } else {
+            /// New method of loading
+            browser.tabs.query({}).then((tabs) => {
+                for (const tab of tabs) {
+                    browser.sessions.getTabValue(tab.id, "color").then((color) => {
+        
+                        if (color != undefined) {
+                            // console.log("TST-Colorize-Tabs: Color tab " + tab.id + " to color " + color);
+                            colorizeTabs(color, tab.id);
+                        }
+                    });
                 }
             });
         }
