@@ -1,0 +1,16 @@
+name: CI/CD
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: build xpi
+        run: make
+      - uses: actions/upload-artifact@master
+        with:
+          name: TST-Colorize-Tabs.xpi
+          path: TST-Colorize-Tabs.xpi
