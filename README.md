@@ -25,13 +25,27 @@ To customize colors, you can use TreeStyleTab's custom CSS.
 Here are default style rules for each color, which you could override in Tree Style Tabs settings:
 
 ```
-.tab.self-colored-red tab-item-substance { background-color: rgba(255,0,0,0.2) !important; }
-.tab.self-colored-green tab-item-substance { background-color: rgba(0,255,0,0.2) !important; }
-.tab.self-colored-blue tab-item-substance { background-color: rgba(0,128,255,0.2) !important; }
-.tab.self-colored-yellow tab-item-substance { background-color: rgba(255,255,0,0.2) !important; }
-.tab.self-colored-brown tab-item-substance { background-color: rgba(139,69,19,0.2) !important; }
-.tab.self-colored-purple tab-item-substance { background-color: rgba(75,0,130,0.2) !important; }
-.tab.self-colored-orange tab-item-substance { background-color: rgba(255,69,0,0.2) !important; }
+.tab.self-colored-red tab-item-substance { 
+    background-color: rgba(255,0,0,0.2) !important;
+}
+.tab.self-colored-green tab-item-substance { 
+    background-color: rgba(0,255,0,0.2) !important; 
+}
+.tab.self-colored-blue tab-item-substance { 
+    background-color: rgba(0,128,255,0.2) !important;
+}
+.tab.self-colored-yellow tab-item-substance { 
+    background-color: rgba(255,255,0,0.2) !important; 
+}
+.tab.self-colored-brown tab-item-substance { 
+    background-color: rgba(139,69,19,0.2) !important; 
+}
+.tab.self-colored-purple tab-item-substance { 
+    background-color: rgba(75,0,130,0.2) !important; 
+}
+.tab.self-colored-orange tab-item-substance { 
+    background-color: rgba(255,69,0,0.2) !important;
+}
 ```
 
 ## Keyboard hotkeys
