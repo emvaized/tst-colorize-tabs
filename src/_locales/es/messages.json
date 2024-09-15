@@ -42,5 +42,45 @@
     "color": {
         "message": "Color",
         "description": "Color"
+    },
+    "settings": {
+        "message": "Configuración",
+        "description": "Settings"
+    },
+    "selectColorCheme": {
+        "message": "Selecciona tu esquema de color preferido:",
+        "description": "Select your preferred color scheme:"
+    },
+    "auto": {
+        "message": "Automático",
+        "description": "Auto"
+    },
+    "light": {
+        "message": "Claro",
+        "description": "Light"
+    },
+    "dark": {
+        "message": "Oscuro",
+        "description": "Dark"
+    },
+    "selectKeyboardBehavior": {
+        "message": "Selecciona tu comportamiento preferido del teclado:",
+        "description": "Select your preferred keyboard behavior:"
+    },
+    "keyboardStop": {
+        "message": "Detener en la parte superior o inferior",
+        "description": "Stop at the top or bottom"
+    },
+    "keyboardCycle": {
+        "message": "Ciclar continuamente",
+        "description": "Cycle around"
+    },
+    "writeReview": {
+        "message": "Escribir una reseña",
+        "description": "Write a review"
+    },
+    "githubPage": {
+        "message": "Página de Github",
+        "description": "Github page"
     }
 }

@@ -42,5 +42,45 @@
     "color": {
         "message": "Цвет",
         "description": "Color"
+    },
+    "settings": {
+        "message": "Настройки",
+        "description": "Settings"
+    },
+    "selectColorCheme": {
+        "message": "Выберите предпочитаемую цветовую схему:",
+        "description": "Select your preferred color scheme:"
+    },
+    "auto": {
+        "message": "Авто",
+        "description": "Auto"
+    },
+    "light": {
+        "message": "Светлая",
+        "description": "Light"
+    },
+    "dark": {
+        "message": "Темная",
+        "description": "Dark"
+    },
+    "selectKeyboardBehavior": {
+        "message": "Выберите предпочитаемое поведение клавиатуры:",
+        "description": "Select your preferred keyboard behavior:"
+    },
+    "keyboardStop": {
+        "message": "Остановка вверху или внизу",
+        "description": "Stop at the top or bottom"
+    },
+    "keyboardCycle": {
+        "message": "Циклическое переключение",
+        "description": "Cycle around"
+    },
+    "writeReview": {
+        "message": "Написать отзыв",
+        "description": "Write a review"
+    },
+    "githubPage": {
+        "message": "Страница на Github",
+        "description": "Github page"
     }
 }

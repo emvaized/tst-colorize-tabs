@@ -42,5 +42,45 @@
     "color": {
         "message": "Колір",
         "description": "Color"
+    },
+    "settings": {
+        "message": "Налаштування",
+        "description": "Settings"
+    },
+    "selectColorCheme": {
+        "message": "Виберіть бажану кольорову схему:",
+        "description": "Select your preferred color scheme:"
+    },
+    "auto": {
+        "message": "Автоматично",
+        "description": "Auto"
+    },
+    "light": {
+        "message": "Світла",
+        "description": "Light"
+    },
+    "dark": {
+        "message": "Темна",
+        "description": "Dark"
+    },
+    "selectKeyboardBehavior": {
+        "message": "Виберіть бажану поведінку клавіатури:",
+        "description": "Select your preferred keyboard behavior"
+    },
+    "keyboardStop": {
+        "message": "Зупинка зверху або знизу",
+        "description": "Stop at the top or bottom"
+    },
+    "keyboardCycle": {
+        "message": "Циклічне перемикання",
+        "description": "Cycle around"
+    },
+    "writeReview": {
+        "message": "Написати відгук",
+        "description": "Write a review"
+    },
+    "githubPage": {
+        "message": "Сторінка на Github",
+        "description": "Github page"
     }
 }

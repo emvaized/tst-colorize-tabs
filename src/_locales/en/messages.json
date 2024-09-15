@@ -1,47 +1,36 @@
 {
     "extensionDescription": {
-        "message": "This extension allows to set individual color for each tab in order to highlight it",
-        "description": "This extension allows to set individual color for each tab in order to highlight it"
+        "message": "This extension allows to set individual color for each tab in order to highlight it"
     },
     "green": {
-        "message": "Green",
-        "description": "Green"
+        "message": "Green"
     },
     "red": {
-        "message": "Red",
-        "description": "Red"
+        "message": "Red"
     },
     "blue": {
-        "message": "Blue",
-        "description": "Blue"
+        "message": "Blue"
     },
     "brown": {
-        "message": "Brown",
-        "description": "Brown"
+        "message": "Brown"
     },
     "yellow": {
-        "message": "Yellow",
-        "description": "Yellow"
+        "message": "Yellow"
     },
     "purple": {
-        "message": "Purple",
-        "description": "Purple"
+        "message": "Purple"
     },
     "orange": {
-        "message": "Orange",
-        "description": "Orange"
+        "message": "Orange"
     },
     "noColor": {
-        "message": "No color",
-        "description": "No color"
+        "message": "No color"
     },
     "chooseColor": {
-        "message": "Choose color",
-        "description": "Choose color"
+        "message": "Choose color"
     },
     "color": {
-        "message": "Color",
-        "description": "Color"
+        "message": "Color"
     },
     "settings": {
         "message": "Settings"

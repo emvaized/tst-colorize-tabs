@@ -42,5 +42,45 @@
     "color": {
         "message": "Kleur",
         "description": "Color"
+    },
+    "settings": {
+        "message": "Instellingen",
+        "description": "Settings"
+    },
+    "selectColorCheme": {
+        "message": "Selecteer je voorkeur kleurenschema:",
+        "description": "Select your preferred color scheme:"
+    },
+    "auto": {
+        "message": "Automatisch",
+        "description": "Auto"
+    },
+    "light": {
+        "message": "Licht",
+        "description": "Light"
+    },
+    "dark": {
+        "message": "Donker",
+        "description": "Dark"
+    },
+    "selectKeyboardBehavior": {
+        "message": "Selecteer je voorkeur toetsenbordgedrag:",
+        "description": "Select your preferred keyboard behavior"
+    },
+    "keyboardStop": {
+        "message": "Stoppen bovenaan of onderaan",
+        "description": "Stop at the top or bottom"
+    },
+    "keyboardCycle": {
+        "message": "Doorgaan in een lus",
+        "description": "Cycle around"
+    },
+    "writeReview": {
+        "message": "Schrijf een beoordeling",
+        "description": "Write a review"
+    },
+    "githubPage": {
+        "message": "Github-pagina",
+        "description": "Github page"
     }
 }
