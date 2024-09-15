@@ -7,12 +7,12 @@
 
 This extension allows to set individual color for each tab in order to highlight them. Currently available colors: red, green, blue, yellow, brown, purple, orange. [TreeStyleTabs](https://addons.mozilla.org/firefox/addon/tree-style-tab/) extension is required for it to run. 
 
-Huge thanks to [@irvinm](https://github.com/irvinm) for many contributions to this project 🎉
-Check out his addon [TST Lock](https://github.com/irvinm/TST-Lock)
-
 <a href="https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get for Firefox"></a>
 
----
+Huge thanks to [@irvinm](https://github.com/irvinm) for many contributions to this project! 🎉
+Check out his addon [TST Lock](https://github.com/irvinm/TST-Lock)
+
+<br>
 
 ## Important notes
 
