@@ -3,7 +3,7 @@
 [![Mozilla Add-on](https://img.shields.io/amo/users/tst-colorize-tabs?color=%23FF6611&label=users&logo=Firefox)](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
 [![Mozilla Add-on Stars](https://img.shields.io/amo/stars/tst-colorize-tabs)](https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/)
 
-# <sub align="bottom"><img height="40px" src="./images/color.png"></sub> TST Colorize Tabs
+# <sub align="bottom"><img height="40px" src="./src/images/color.png"></sub> TST Colorize Tabs
 
 This extension allows to set individual color for each tab in order to highlight them. Currently available colors: red, green, blue, yellow, brown, purple, orange. [TreeStyleTabs](https://addons.mozilla.org/firefox/addon/tree-style-tab/) extension is required for it to run. 
 
