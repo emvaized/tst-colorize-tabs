@@ -23,6 +23,7 @@ function loadOptions() {
     console.log(error);
   });
   setFooterButtons();
+  setTranslations();
 }
 
 // Save options when changes occur
@@ -62,6 +63,18 @@ function setFooterButtons(){
   document.querySelector("#writeAReviewButton").addEventListener("click", function (val) {
       window.open('https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/reviews/', '_blank');
   });
+}
+
+function setTranslations(){
+  document.querySelectorAll('*[i18n]').forEach(el => {
+    const key = el.getAttribute('i18n');
+    if (key){
+      const translatedLabel = chrome.i18n.getMessage(key);
+      if (translatedLabel){
+        el.innerText = translatedLabel;
+      }
+    }
+  })
 }
 
 // Load options when the page is opened

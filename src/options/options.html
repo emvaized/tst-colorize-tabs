@@ -7,34 +7,39 @@
   <link rel="stylesheet" href="options.css">
 </head>
 <body>
-  <h3>Settings</h3>
+  <h3 i18n="settings">Settings</h3>
   <hr/>
-  <p>Select your preferred color scheme:</p>
+  <p i18n="selectColorCheme">Select your preferred color scheme:</p>
   <label>
-    <input type="radio" name="colorScheme" value="auto" checked> Auto
+    <input i18n="auto" type="radio" name="colorScheme" value="auto" checked> Auto
   </label>
   <label>
-    <input type="radio" name="colorScheme" value="light"> Light
+    <input i18n="light" type="radio" name="colorScheme" value="light"> Light
   </label>
   <label>
-    <input type="radio" name="colorScheme" value="dark"> Dark
+    <input i18n="dark" type="radio" name="colorScheme" value="dark"> Dark
   </label>
 
-  <p>Select your preferred keyboard behavior:</p>
+  <p i18n="selectKeyboardBehavior">Select your preferred keyboard behavior:</p>
   <label>
-    <input type="radio" name="keyboardBehavior" value="stop" checked> Stop at the top or bottom
+    <input i18n="keyboardStop" type="radio" name="keyboardBehavior" value="stop" checked> Stop at the top or bottom
   </label>
   <label>
-    <input type="radio" name="keyboardBehavior" value="cycle"> Cycle around
+    <input i18n="keyboardCycle" type="radio" name="keyboardBehavior" value="cycle"> Cycle around
   </label>
 
 
   <hr />
   <div id='footer-buttons'>
     <button type='button' id='writeAReviewButton'> 
-        <img height='15px' width='15px' src="./icons/review.svg" /> Write a review</button>
-    <button  type='button' id='githubButton'>
-        <img height='15px' width='15px' src="./icons/github.svg" /> Github page </button>
+        <img height='15px' width='15px' src="./icons/review.svg" /> 
+        <span i18n="writeReview">Write a review</span>
+      </button>
+
+    <button type='button' id='githubButton'>
+        <img height='15px' width='15px' src="./icons/github.svg" /> 
+        <span i18n="githubPage">Github page</span>
+      </button>
   </div>
 
   <!-- Load the external JavaScript file -->

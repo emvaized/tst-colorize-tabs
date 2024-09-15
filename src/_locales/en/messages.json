@@ -42,5 +42,35 @@
     "color": {
         "message": "Color",
         "description": "Color"
+    },
+    "settings": {
+        "message": "Settings"
+    },
+    "selectColorCheme": {
+        "message": "Select your preferred color scheme:"
+    },
+    "auto": {
+        "message": "Auto"
+    },
+    "light": {
+        "message": "Light"
+    },
+    "dark": {
+        "message": "Dark"
+    },
+    "selectKeyboardBehavior": {
+        "message": "Select your preferred keyboard behavior:"
+    },
+    "keyboardStop": {
+        "message": "Stop at the top or bottom"
+    },
+    "keyboardCycle": {
+        "message": "Cycle around"
+    },
+    "writeReview": {
+        "message": "Write a review"
+    },
+    "githubPage": {
+        "message": "Github page"
     }
 }
