@@ -1,7 +1,7 @@
 // Load saved options when the page is opened
 function loadOptions() {
     browser.storage.sync.get({
-      colorScheme: "light",
+      colorScheme: "auto",
       keyboardBehavior: "stop"
     }).then((result) => {
       const colorScheme = result.colorScheme;
@@ -12,11 +12,7 @@ function loadOptions() {
       document.querySelector(`input[name="keyboardBehavior"][value="${keyboardBehavior}"]`).checked = true;
 
       // Toggle dark mode class if dark color scheme is selected
-      if (colorScheme === "dark") {
-        document.body.classList.add("dark-mode");
-      } else {
-        document.body.classList.remove("dark-mode");
-      }
+      setColorSchemeForPage(colorScheme)
 
       // Log the loaded options to the console
       console.log("Options loaded successfully:");
@@ -27,7 +23,7 @@ function loadOptions() {
       console.log(error);
     });
   }
-  
+
   // Save options when changes occur
   function saveOptions() {
     const selectedColorScheme = document.querySelector('input[name="colorScheme"]:checked').value;
@@ -35,16 +31,26 @@ function loadOptions() {
     browser.storage.sync.set({ colorScheme: selectedColorScheme, keyboardBehavior: selectedKeyboardBehavior });
 
     // Toggle dark mode class if dark color scheme is selected
-    if (selectedColorScheme === "dark") {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }    
+    setColorSchemeForPage(selectedColorScheme)
 
     // Log the selected options to the console
     console.log("Options saved successfully:");
     console.log("  Color scheme:", selectedColorScheme);
     console.log("  Keyboard behavior:", selectedKeyboardBehavior);
+  }
+
+  // Apply the selected color scheme to options page
+  function setColorSchemeForPage(scheme){
+    if (scheme === "dark") {
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("auto");
+    } else if (scheme == "auto"){
+      document.body.classList.remove("dark-mode");
+      document.body.classList.add("auto");
+    } else {
+      document.body.classList.remove("dark-mode");
+      document.body.classList.remove("auto");
+    }  
   }
   
   // Load options when the page is opened

@@ -25,13 +25,14 @@ const BEHAVIOR_CYCLE_AROUND = "cycle";
 // Define color scheme constants
 const COLOR_SCHEME_LIGHT = "light";
 const COLOR_SCHEME_DARK = "dark";
+const COLOR_SCHEME_AUTO = "auto";
 
-let colorScheme = COLOR_SCHEME_DARK;
+let colorScheme = COLOR_SCHEME_AUTO;
 var keyboardBehavior = BEHAVIOR_STOP_AT_TOP_BOTTOM;
 
 // Load user preferences from storage
 browser.storage.sync.get({
-    colorScheme: COLOR_SCHEME_DARK,
+    colorScheme: COLOR_SCHEME_AUTO,
     keyboardBehavior: BEHAVIOR_STOP_AT_TOP_BOTTOM,
   }).then((result) => {
     colorScheme = result.colorScheme;

@@ -16,3 +16,9 @@ body {
     margin-bottom: 10px;
   }
   
+  @media (prefers-color-scheme: dark) {
+    body.auto {
+      background-color: #333;
+      color: #f5f5f5;
+    }
+  }
