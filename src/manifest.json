@@ -6,12 +6,12 @@
     "description": "__MSG_extensionDescription__",
     "homepage_url": "https://github.com/irvinm/TST-Colorize-Tabs",
     "options_ui": {
-        "page": "options.html",
+        "page": "options/ptions.html",
         "browser_style": true
     },
     "browser_action": {
         "default_icon": "images/color.png",
-        "default_popup": "options.html"
+        "default_popup": "options/options.html"
     },
     "icons": {
         "128": "images/color.png"
