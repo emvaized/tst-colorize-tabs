@@ -21,6 +21,17 @@ hr {
   opacity: 0.2;
 }
 
+#footer-buttons{
+  padding: 6px;
+  margin-top: 8px;
+}
+#footer-buttons img {
+  vertical-align: bottom;
+}
+#footer-buttons button{
+  cursor: pointer;
+}
+
 @media (prefers-color-scheme: dark) {
   body.auto {
     background-color: #333;

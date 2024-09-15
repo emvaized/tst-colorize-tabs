@@ -22,6 +22,7 @@ function loadOptions() {
     console.log("Error loading options:");
     console.log(error);
   });
+  setFooterButtons();
 }
 
 // Save options when changes occur
@@ -51,6 +52,16 @@ function setColorSchemeForPage(scheme) {
     document.body.classList.remove("dark-mode");
     document.body.classList.remove("auto");
   }
+}
+
+// Add on click listeners to footer buttons
+function setFooterButtons(){
+  document.querySelector("#githubButton").addEventListener("click", function (val) {
+      window.open('https://github.com/emvaized/tst-colorize-tabs', '_blank');
+  });
+  document.querySelector("#writeAReviewButton").addEventListener("click", function (val) {
+      window.open('https://addons.mozilla.org/firefox/addon/tst-colorize-tabs/reviews/', '_blank');
+  });
 }
 
 // Load options when the page is opened
