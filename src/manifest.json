@@ -4,7 +4,7 @@
     "name": "TST Colorize Tabs",
     "version": "2.0.0",
     "description": "__MSG_extensionDescription__",
-    "homepage_url": "https://github.com/irvinm/TST-Colorize-Tabs",
+    "homepage_url": "https://github.com/emvaized/tst-colorize-tabs",
     "options_ui": {
         "page": "options/options.html",
         "browser_style": true
